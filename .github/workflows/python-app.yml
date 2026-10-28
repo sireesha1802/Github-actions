@@ -17,7 +17,9 @@ jobs:
       - name: Run lint
         run: echo "Run lint"
   test:
+    needs: lints
     runs-on: ubuntu-latest
+    
     steps:
       - name: Run test
         run: echo "Run test"
