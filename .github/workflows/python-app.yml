@@ -12,12 +12,11 @@ on:
 
 jobs:
   lints:
-    runs-on: ubu
+    runs-on: ubuntu-latest
     steps:
       - name: Run lint
         run: echo "Run lint"
   test:
-    needs: lints
     runs-on: ubuntu-latest
     
     steps:
