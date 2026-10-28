@@ -16,7 +16,7 @@ def home():
         <body>
             <h1>Welcome to {APP_NAME}!</h1>
             <p>Environment: {ENVIRONMENT}</p>
-            <p>Status: Application is running successfully.</p>
+            <p>Status: Application is running successfully ythh.</p>
             <p><a href="/health">Health Check</a></p>
             <p><a href="/info">Application Info</a></p>
         </body>
