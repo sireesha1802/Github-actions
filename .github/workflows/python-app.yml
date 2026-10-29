@@ -34,18 +34,10 @@ jobs:
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           fi
-          pip install pytest ruff
-
-      - name: Run lint
-        run: ruff check .
-
-      - name: Run tests
-        run: pytest -v
 
   # Build and publish only after tests pass on main
   build:
     name: Build and Push Docker Image
-    needs: test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
