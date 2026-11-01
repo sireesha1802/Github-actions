@@ -1,0 +1,29 @@
+
+name: Self Hosted Runner Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test Self Hosted Runner
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check Hostname
+        run: hostname
+
+      - name: Check User
+        run: whoami
+
+      - name: Check OS
+        run: uname -a
+
+      - name: Check Disk
+        run: df -h
+
+      - name: Success Message
+        run: echo "Self Hosted Runner Working Successfully!"
